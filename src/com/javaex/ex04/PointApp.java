@@ -7,6 +7,8 @@ public class PointApp {
 	public static void main(String[] args) {
 		
 		ArrayList<Point> pList = new ArrayList<Point>();
+		//제네릭엔 <int>기본자료형 안됌. 그래서 <Integer>가능함.
+		
 		
 		Point p01 = new Point(2,8);
 		Point p02 = new Point(7,3);
@@ -72,6 +74,14 @@ public class PointApp {
 //			System.out.println(ppp.getX());
 			System.out.println(ppp);
 		}
+		
+		
+		
+		//pList 원 추가
+		Circle c01 = new Circle(100);
+		
+		//pList.add(c01);   --제네릭으로 <Point>를 넣었기때문에 Circle 추가 불가능.)
+		
 		
 		
 		
