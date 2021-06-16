@@ -32,7 +32,44 @@ public class PointApp {
 		
 		Point p04 = new Point(3,6);
 		pSet.add(p04);
+		System.out.println("=========(중복)==============");
 		System.out.println(pSet.toString());
+		System.out.println("=========(중복)==============");
+		
+		
+		System.out.println("equals()===========================================");
+		//Point 비교  -->equals()
+		System.out.println(p02.equals(p04));  //내가 정의한 메소드(로직)비교 -->true
+		System.out.println(p02 == p04);       //주소비교 -->false
+		
+		
+		System.out.println(p01.equals(p04));
+		System.out.println(p01 == p04); 	  //주소비교 -->false
+		
+		
+		System.out.println("hashCode()===========================================");
+		//hashCode()
+		System.out.println(p01.hashCode());
+		System.out.println(p02.hashCode());
+		System.out.println(p03.hashCode());
+		System.out.println(p04.hashCode());
+		
+		
+		
+		
+		//1차로 hashCode(포인트의경우 x+y) 를 판단한 후 같다면
+		//2차로 equals에서 p02(3,6) / p04(3,6)인지  p02(3,6) / p04(2,7)인지 확인하고
+		//걸러낸다.  
+		//hashCode메소드를 써주기전엔 (중복)의 출력이
+		//[Point [x=1, y=2], Point [x=3, y=6], Point [x=5, y=10] ,Point [x=3, y=6]]이 나오지만
+		
+		//hashCode를 사용하고 equals까지 검증되면 (중복)의 출력이
+		//[Point [x=1, y=2], Point [x=3, y=6], Point [x=5, y=10]] 로 출력된다.
+	
+		
+		
+		
+		
 		
 		
 		
